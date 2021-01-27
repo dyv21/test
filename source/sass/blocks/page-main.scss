@@ -1,0 +1,42 @@
+.page-main {
+  display: grid;
+  grid-template-columns: 19.2% 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding-top: 22px;
+  padding-bottom: 29px;
+  position: relative;
+
+  @media (max-width: $tablet-width-only) {
+    padding: 15px 0;
+    gap: 15px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 10px 0;
+    grid-template-columns: 1fr;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    width: 96%;
+    height: 1px;
+    background-color: $dark-gray;
+
+    @media (max-width: $tablet-width-only) {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}

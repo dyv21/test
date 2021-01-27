@@ -1,0 +1,8 @@
+.block-5 {
+  background-color: $gray;
+  height: 210px;
+
+  @media (max-width: $tablet-width-only) {
+    height: 160px;
+  }
+}

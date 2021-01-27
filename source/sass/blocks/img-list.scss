@@ -1,0 +1,28 @@
+.img-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21.25px;
+
+  @media (max-width: $tablet-width-only) {
+    gap: 15px;
+  }
+}
+
+.img-list__item {
+  width: 17.75%;
+  height: 150px;
+  background-color: $gray;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width-only) {
+    width: 130px;
+  }
+}
+
+.img-list__img {
+  width: 134px;
+  height: 150px;
+  object-fit: cover;
+}

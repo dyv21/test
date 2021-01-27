@@ -1,0 +1,11 @@
+.sidebar {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-width-only) {
+    grid-column: 1;
+    gap: 10px;
+  }
+}

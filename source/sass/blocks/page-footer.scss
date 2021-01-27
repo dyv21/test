@@ -1,0 +1,22 @@
+.page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 23px 0;
+
+  @media (max-width: $tablet-width-only) {
+    padding: 15px 0;
+  }
+}
+
+.page-footer__box {
+  width: 32.2%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width-only) {
+    height: 160px;
+  }
+}

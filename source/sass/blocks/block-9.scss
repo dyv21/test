@@ -1,0 +1,9 @@
+.block-9 {
+  width: 49%;
+  height: 198px;
+  background-color: $gray;
+
+  @media (max-width: $tablet-width-only) {
+    height: 170px;
+  }
+}

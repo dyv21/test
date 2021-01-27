@@ -1,0 +1,9 @@
+.block-8 {
+  width: 48.6%;
+  height: 198px;
+  background-color: $gray;
+
+  @media (max-width: $tablet-width-only) {
+    height: 170px;
+  }
+}

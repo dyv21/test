@@ -1,0 +1,8 @@
+.block-12 {
+  height: 75px;
+  background-color: $dark-gray;
+
+  @media (max-width: $tablet-width-only) {
+    height: 65px;
+  }
+}

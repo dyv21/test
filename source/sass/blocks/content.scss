@@ -1,0 +1,17 @@
+.content {
+  grid-column: 2;
+
+  @media (max-width: $mobile-width-only) {
+    grid-column: 1;
+  }
+}
+
+.content__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__img-list {
+  margin-top: 20px;
+  margin-bottom: 22px;
+}

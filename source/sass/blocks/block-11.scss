@@ -1,0 +1,9 @@
+.block-11 {
+  width: 31%;
+  height: 180px;
+  background-color: $dark-gray;
+
+  @media (max-width: $tablet-width-only) {
+    height: 160px;
+  }
+}

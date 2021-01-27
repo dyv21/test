@@ -1,0 +1,8 @@
+.block-4 {
+  height: 337px;
+  background-color: $dark-gray;
+
+  @media (max-width: $mobile-width-only) {
+    height: 200px;
+  }
+}
