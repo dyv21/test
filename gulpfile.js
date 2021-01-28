@@ -22,7 +22,7 @@ const styles = () => {
     .pipe(postcss([autoprefixer()]))
     .pipe(rename('style.css'))
     .pipe(sourcemap.write('.'))
-    .pipe(gulp.dest('docs/css/'))
+    .pipe(gulp.dest('build/css/'))
     .pipe(sync.stream());
 };
 
@@ -48,7 +48,7 @@ exports.images = images;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'docs/',
+      baseDir: 'build/',
     },
     cors: true,
     notify: false,
@@ -65,7 +65,7 @@ const copy = () => {
     .src(['source/*.html', 'source/js/*.js', 'source/img/**'], {
       base: 'source/',
     })
-    .pipe(gulp.dest('docs'));
+    .pipe(gulp.dest('build'));
 };
 
 exports.copy = copy;
@@ -73,7 +73,7 @@ exports.copy = copy;
 // Clean
 
 const clean = () => {
-  return del('docs');
+  return del('build');
 };
 
 exports.clean = clean;
@@ -87,6 +87,6 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', sync.reload);
 };
 
-exports.docs = gulp.series(clean, copy, styles, images);
+exports.build = gulp.series(clean, copy, styles, images);
 
-exports.start = gulp.series(exports.docs, server, watcher);
+exports.start = gulp.series(exports.build, server, watcher);

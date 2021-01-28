@@ -259,13 +259,18 @@ button {
       gap: 15px; } }
 
 .img-list__item {
-  width: 17.75%;
+  max-width: 17.75%;
   height: 150px;
-  background-color: #dcdcdc;
+  flex-grow: 1;
   cursor: pointer; }
   @media (max-width: 959px) {
     .img-list__item {
-      width: 130px; } }
+      max-width: 20%;
+      min-width: 15%; } }
+  @media (max-width: 767px) {
+    .img-list__item {
+      max-width: 50%;
+      min-width: 15%; } }
 
 .img-list__img {
   width: 134px;

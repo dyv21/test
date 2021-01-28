@@ -11,13 +11,19 @@
 }
 
 .img-list__item {
-  width: 17.75%;
+  max-width: 17.75%;
   height: 150px;
-  background-color: $gray;
+  flex-grow: 1;
   cursor: pointer;
 
   @media (max-width: $tablet-width-only) {
-    width: 130px;
+    max-width: 20%;
+    min-width: 15%;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 50%;
+    min-width: 15%;
   }
 }
 
